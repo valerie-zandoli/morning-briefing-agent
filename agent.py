@@ -34,11 +34,11 @@ SCOPES = [
 TOKEN_FILE = "token.json"
 CREDENTIALS_FILE = "credentials.json"
 
-# The OpenRouter free router picks a model that supports tool calling and honors
-# the account privacy settings (training and publishing toggles are off).  A
-# model pinned by name, such as Nemotron, is rejected under those settings.
+# The Pursuit-issued Claude key replaced the OpenRouter free router on 2026-10-08.
+# The old setup (model_id "openrouter/openrouter/free" plus the OpenRouter base
+# URL and OPENROUTER_API_KEY) stays in the git history.
 # Set MODEL_ID in the environment to override.
-DEFAULT_MODEL_ID = "openrouter/openrouter/free"
+DEFAULT_MODEL_ID = "anthropic/claude-sonnet-5-5"
 
 SYSTEM_PROMPT = """You are a Morning Briefing Agent.  Your job is to tell the user what actually matters today.
 
@@ -344,14 +344,14 @@ def check_slack(hours_back: int = 12, max_channels: int = 5) -> str:
 
 
 def run() -> None:
-    api_key = os.getenv("OPENROUTER_API_KEY", "")
+    api_key = os.getenv("ANTHROPIC_API_KEY", "")
     if not api_key or "your-key-here" in api_key:
-        raise SystemExit("OPENROUTER_API_KEY is missing or still a placeholder in .env")
+        raise SystemExit("ANTHROPIC_API_KEY is missing or still a placeholder in .env")
 
     print("[MOCK DATA: fake inbox, calendar, and Slack]\n" if use_mock() else "[LIVE DATA]\n")
 
     model = LiteLLMModel(
-        client_args={"api_key": api_key, "api_base": "https://openrouter.ai/api/v1"},
+        client_args={"api_key": api_key},
         model_id=os.getenv("MODEL_ID", DEFAULT_MODEL_ID),
         params={"max_tokens": 4096},
     )
