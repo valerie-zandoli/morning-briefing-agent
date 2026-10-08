@@ -290,6 +290,16 @@ def check_calendar(hours_ahead: int = 24) -> str:
         return f"ERROR in check_calendar: {error}"
 
 
+def slack_message(message: dict) -> dict:
+    """One Slack message for the model.  File-only posts list their file names,
+    so the briefing does not report them as empty."""
+    entry = {"user": message.get("user", ""), "text": message.get("text", "")[:300]}
+    files = [f.get("name", "file") for f in message.get("files", [])]
+    if files:
+        entry["files"] = files[:5]
+    return entry
+
+
 @tool
 def check_slack(hours_back: int = 12, max_channels: int = 5) -> str:
     """Fetch recent Slack messages from the most recently active channels.
@@ -329,10 +339,7 @@ def check_slack(hours_back: int = 12, max_channels: int = 5) -> str:
                     {
                         "channel": channel["name"],
                         "latest": float(messages[0]["ts"]),
-                        "messages": [
-                            {"user": m.get("user", ""), "text": m.get("text", "")[:300]}
-                            for m in messages
-                        ],
+                        "messages": [slack_message(m) for m in messages],
                     }
                 )
         active.sort(key=lambda c: c["latest"], reverse=True)
