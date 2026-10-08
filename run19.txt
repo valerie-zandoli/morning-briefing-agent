@@ -1,0 +1,37 @@
+reasoningContent is not supported in multi-turn conversations with the Chat Completions API.
+[MOCK DATA: fake inbox, calendar, and Slack]
+
+[tool call] check_gmail
+[tool call] check_calendar
+[tool call] check_slack
+
+===== BRIEFING =====
+
+
+
+## URGENT
+- **Registrar Office**: Enrollment verification form is incomplete and due **today by 5 PM** — late submissions are rejected. (email)
+- **Slack, project-alpha**: Build is failing on main since this morning; **person A** asked you to take a look before the demo. (addressed to you)
+
+## UPCOMING EVENTS
+- Team stand-up, 4:00 PM, Room 3 (attendees: priya, dana)
+- **Partner design review and 1:1 with mentor overlap** 6:00–6:30 PM (design review 5:30–6:30 PM, video call; mentor 1:1 6:00–6:30 PM, Cafe on 5th)
+
+## SLACK HIGHLIGHTS
+- **project-alpha** — build failing on main; **person B** says they can reproduce it and suspects a missing config value.
+- **general** — **person E**: timesheets are due by end of day today or payroll will skip you (information, not directed at you).
+- **design-team** — reminder that the partner design review is at the same time today, and someone can't find the updated mockups in the shared folder.
+- **general** — lunch orders close at 11:30 (routine notice).
+
+## OTHER EMAILS
+- **Dana Whitfield**: second draft of grant narrative attached — comments requested by Thursday morning.
+- **IT Helpdesk**: password expires in 14 days; no action needed today.
+- **Priya Nair**: casual lunch invite for Friday.
+- **Daily Deals** (50% off sale) and **"You won!"** (Prize Team) — promotional/spam, disregard.
+
+## SUGGESTED ACTIONS
+1. Investigate the failing build on main in project-alpha before the demo.
+2. Submit the enrollment verification form before 5 PM today.
+3. Resolve the 6:00 PM conflict between the partner design review and your 1:1 with the mentor.
+4. Review Dana Whitfield's grant draft and return comments by Thursday morning.
+

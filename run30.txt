@@ -1,0 +1,40 @@
+reasoningContent is not supported in multi-turn conversations with the Chat Completions API.
+[MOCK DATA: fake inbox, calendar, and Slack]
+
+[tool call] check_gmail
+[tool call] check_calendar
+[tool call] check_slack
+[filter] dropped 3 promotional email(s) before the model saw them
+
+===== BRIEFING =====
+
+# Morning Briefing
+
+## URGENT
+- **Registrar Office** — Enrollment verification form due today by 5 PM or you'll need to reapply next term
+- **project-alpha (Slack)** — Build is failing on main since this morning; person A needs you to look at it before the demo
+- **general (Slack)** — Timesheets due by end of day today or payroll will skip you this cycle
+
+## UPCOMING EVENTS
+- **Team stand-up** — 3:00–3:15 PM, Room 3
+- **Partner design review** — 4:30–5:30 PM, Video call
+- **1:1 with mentor** — 5:00–5:30 PM, Cafe on 5th
+- ⚠️ **Overlap:** Partner design review and 1:1 with mentor conflict 5:00–5:30 PM
+
+## SLACK HIGHLIGHTS
+- **person A** (@YOU): Build failing on main, needs attention before demo
+- **person E** (@everyone): Timesheet deadline reminder
+
+## OTHER EMAILS
+- **Dana Whitfield** — Grant draft review requested by Thursday morning
+- **IT Helpdesk** — Password expires in 14 days (routine, no action today)
+- **Priya Nair** — Lunch invitation for Friday
+- 3 promotional emails were filtered out
+
+## SUGGESTED ACTIONS
+1. Submit enrollment form before the 5 PM deadline
+2. Investigate the build failure on main (project-alpha)
+3. File your timesheets before end of day
+4. Resolve the 5:00 PM calendar conflict (design review vs. mentor 1:1)
+5. Review Dana's grant draft by Thursday morning
+

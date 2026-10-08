@@ -1,0 +1,129 @@
+[MOCK DATA: fake inbox, calendar, and Slack]
+
+
+[1;31mGive Feedback / Get Help: https://github.com/BerriAI/litellm/issues/new[0m
+LiteLLM.Info: If you need to debug this error, use `litellm._turn_on_debug()'.
+
+Traceback (most recent call last):
+  File "/Users/valeriezandoli/morning-briefing-agent/.venv/lib/python3.12/site-packages/litellm/llms/custom_httpx/llm_http_handler.py", line 269, in _make_common_async_call
+    response = await async_httpx_client.post(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/valeriezandoli/morning-briefing-agent/.venv/lib/python3.12/site-packages/litellm/litellm_core_utils/logging_utils.py", line 289, in async_wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/valeriezandoli/morning-briefing-agent/.venv/lib/python3.12/site-packages/litellm/llms/custom_httpx/http_handler.py", line 662, in post
+    await _raise_masked_async_error(e, stream)
+  File "/Users/valeriezandoli/morning-briefing-agent/.venv/lib/python3.12/site-packages/litellm/llms/custom_httpx/http_handler.py", line 442, in _raise_masked_async_error
+    raise MaskedHTTPStatusError(e, message=_body, text=_body) from None
+litellm.llms.custom_httpx.http_handler.MaskedHTTPStatusError: Client error '429 Too Many Requests' for url 'https://openrouter.ai/api/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/valeriezandoli/morning-briefing-agent/.venv/lib/python3.12/site-packages/litellm/main.py", line 647, in acompletion
+    response = await init_response
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/valeriezandoli/morning-briefing-agent/.venv/lib/python3.12/site-packages/litellm/llms/custom_httpx/llm_http_handler.py", line 746, in acompletion_stream_function
+    completion_stream, _response_headers = await self.make_async_call_stream_helper(
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/valeriezandoli/morning-briefing-agent/.venv/lib/python3.12/site-packages/litellm/llms/custom_httpx/llm_http_handler.py", line 805, in make_async_call_stream_helper
+    response = await self._make_common_async_call(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/valeriezandoli/morning-briefing-agent/.venv/lib/python3.12/site-packages/litellm/llms/custom_httpx/llm_http_handler.py", line 286, in _make_common_async_call
+    raise self._handle_error(e=e, provider_config=provider_config)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/valeriezandoli/morning-briefing-agent/.venv/lib/python3.12/site-packages/litellm/llms/custom_httpx/llm_http_handler.py", line 5743, in _handle_error
+    raise provider_config.get_error_class(
+litellm.llms.openrouter.common_utils.OpenRouterException: {"error":{"message":"Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day","code":429,"metadata":{"headers":{"X-RateLimit-Limit":"50","X-RateLimit-Remaining":"0","X-RateLimit-Reset":"1791331200000"},"limit_source":"openrouter_free_tier_daily","remedy_hint":"Wait for the daily reset (see X-RateLimit-Reset), or purchase credits to raise your free-model daily limit.","provider_name":null,"previous_errors":[{"code":429,"message":"Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day"},{"code":429,"message":"Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day"},{"code":429,"message":"Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day"}]}},"user_id":"user_3GuuxHecodNTtSbazxQ54zhR3Gz"}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/valeriezandoli/morning-briefing-agent/agent.py", line 304, in <module>
+    run()
+  File "/Users/valeriezandoli/morning-briefing-agent/agent.py", line 298, in run
+    result = agent("What did I miss? Give me my morning briefing.")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/valeriezandoli/morning-briefing-agent/.venv/lib/python3.12/site-packages/strands/agent/agent.py", line 881, in __call__
+    return run_async(
+           ^^^^^^^^^^
+  File "/Users/valeriezandoli/morning-briefing-agent/.venv/lib/python3.12/site-packages/strands/_async.py", line 45, in run_async
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.12/3.12.15/Frameworks/Python.framework/Versions/3.12/lib/python3.12/concurrent/futures/_base.py", line 456, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.12/3.12.15/Frameworks/Python.framework/Versions/3.12/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/opt/homebrew/Cellar/python@3.12/3.12.15/Frameworks/Python.framework/Versions/3.12/lib/python3.12/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/valeriezandoli/morning-briefing-agent/.venv/lib/python3.12/site-packages/opentelemetry/instrumentation/threading/__init__.py", line 162, in wrapped_func
+    return original_func(*func_args, **func_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/valeriezandoli/morning-briefing-agent/.venv/lib/python3.12/site-packages/strands/_async.py", line 38, in execute
+    return asyncio.run(execute_async())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.12/3.12.15/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/runners.py", line 195, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.12/3.12.15/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.12/3.12.15/Frameworks/Python.framework/Versions/3.12/lib/python3.12/asyncio/base_events.py", line 691, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Users/valeriezandoli/morning-briefing-agent/.venv/lib/python3.12/site-packages/strands/_async.py", line 33, in execute_async
+    return await async_func()
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/valeriezandoli/morning-briefing-agent/.venv/lib/python3.12/site-packages/strands/agent/agent.py", line 902, in _invoke_async_and_flush
+    return await self.invoke_async(prompt, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/valeriezandoli/morning-briefing-agent/.venv/lib/python3.12/site-packages/strands/agent/agent.py", line 984, in invoke_async
+    async for event in events:
+  File "/Users/valeriezandoli/morning-briefing-agent/.venv/lib/python3.12/site-packages/strands/agent/agent.py", line 1398, in stream_async
+    async for event in events:
+  File "/Users/valeriezandoli/morning-briefing-agent/.venv/lib/python3.12/site-packages/strands/agent/agent.py", line 1542, in _run_loop
+    async for event in self._middleware_registry.invoke(
+  File "/Users/valeriezandoli/morning-briefing-agent/.venv/lib/python3.12/site-packages/strands/_middleware/registry.py", line 167, in invoke
+    async for event in gen:
+  File "/Users/valeriezandoli/morning-briefing-agent/.venv/lib/python3.12/site-packages/strands/agent/agent.py", line 1697, in terminal
+    async for event in events:
+  File "/Users/valeriezandoli/morning-briefing-agent/.venv/lib/python3.12/site-packages/strands/agent/agent.py", line 1752, in _execute_event_loop_cycle
+    async for event in events:
+  File "/Users/valeriezandoli/morning-briefing-agent/.venv/lib/python3.12/site-packages/strands/event_loop/event_loop.py", line 302, in event_loop_cycle
+    async for model_event in model_events:
+  File "/Users/valeriezandoli/morning-briefing-agent/.venv/lib/python3.12/site-packages/strands/event_loop/event_loop.py", line 691, in _handle_model_execution
+    raise e
+  File "/Users/valeriezandoli/morning-briefing-agent/.venv/lib/python3.12/site-packages/strands/event_loop/event_loop.py", line 609, in _handle_model_execution
+    async for event in agent._middleware_registry.invoke(
+  File "/Users/valeriezandoli/morning-briefing-agent/.venv/lib/python3.12/site-packages/strands/_middleware/registry.py", line 167, in invoke
+    async for event in gen:
+  File "/Users/valeriezandoli/morning-briefing-agent/.venv/lib/python3.12/site-packages/strands/event_loop/event_loop.py", line 740, in terminal
+    async for event in stream_messages(
+  File "/Users/valeriezandoli/morning-briefing-agent/.venv/lib/python3.12/site-packages/strands/event_loop/streaming.py", line 572, in stream_messages
+    async for event in process_stream(chunks, start_time, cancel_signal):
+  File "/Users/valeriezandoli/morning-briefing-agent/.venv/lib/python3.12/site-packages/strands/event_loop/streaming.py", line 460, in process_stream
+    async for chunk in chunks:
+  File "/Users/valeriezandoli/morning-briefing-agent/.venv/lib/python3.12/site-packages/strands/models/litellm.py", line 372, in stream
+    async for chunk in self._handle_streaming_response(litellm_request):
+  File "/Users/valeriezandoli/morning-briefing-agent/.venv/lib/python3.12/site-packages/strands/models/litellm.py", line 603, in _handle_streaming_response
+    response = await litellm.acompletion(**self.client_args, **litellm_request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/valeriezandoli/morning-briefing-agent/.venv/lib/python3.12/site-packages/litellm/utils.py", line 1864, in wrapper_async
+    raise e
+  File "/Users/valeriezandoli/morning-briefing-agent/.venv/lib/python3.12/site-packages/litellm/utils.py", line 1681, in wrapper_async
+    result = await original_function(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/valeriezandoli/morning-briefing-agent/.venv/lib/python3.12/site-packages/litellm/main.py", line 700, in acompletion
+    raise exception_type(
+          ^^^^^^^^^^^^^^^
+  File "/Users/valeriezandoli/morning-briefing-agent/.venv/lib/python3.12/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 2505, in exception_type
+    raise e  # it's already mapped
+    ^^^^^^^
+  File "/Users/valeriezandoli/morning-briefing-agent/.venv/lib/python3.12/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 2448, in exception_type
+    _map_openrouter_exception(
+  File "/Users/valeriezandoli/morning-briefing-agent/.venv/lib/python3.12/site-packages/litellm/litellm_core_utils/exception_mapping_utils.py", line 2116, in _map_openrouter_exception
+    raise RateLimitError(
+litellm.exceptions.RateLimitError: litellm.RateLimitError: RateLimitError: OpenrouterException - {"error":{"message":"Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day","code":429,"metadata":{"headers":{"X-RateLimit-Limit":"50","X-RateLimit-Remaining":"0","X-RateLimit-Reset":"1791331200000"},"limit_source":"openrouter_free_tier_daily","remedy_hint":"Wait for the daily reset (see X-RateLimit-Reset), or purchase credits to raise your free-model daily limit.","provider_name":null,"previous_errors":[{"code":429,"message":"Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day"},{"code":429,"message":"Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day"},{"code":429,"message":"Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day"}]}},"user_id":"user_3GuuxHecodNTtSbazxQ54zhR3Gz"}

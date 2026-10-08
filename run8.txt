@@ -1,0 +1,37 @@
+reasoningContent is not supported in multi-turn conversations with the Chat Completions API.
+reasoningContent is not supported in multi-turn conversations with the Chat Completions API.
+reasoningContent is not supported in multi-turn conversations with the Chat Completions API.
+reasoningContent is not supported in multi-turn conversations with the Chat Completions API.
+reasoningContent is not supported in multi-turn conversations with the Chat Completions API.
+[MOCK DATA: fake inbox, calendar, and Slack]
+
+[tool call] check_gmail
+[tool call] check_calendar
+[tool call] check_slack
+
+===== BRIEFING =====
+
+**URGENT**
+- Enrollment form due today by 5 PM - Registrar Office (ACTION REQUIRED)
+
+**UPCOMING EVENTS**
+- Partner design review at 5:30 PM overlaps with 1:1 with mentor at 6:00 PM
+
+**SLACK HIGHLIGHTS**
+- Build failing on main in project-alpha needs attention before demo
+- Design team: missing mockups for partner review, reminder about review time
+- General: lunch orders close at 11:30
+
+**OTHER EMAILS**
+- Grant draft review by Thursday morning - Dana Whitfield
+- Password expires in 14 days - IT Helpdesk
+- Lunch invitation Friday around noon - Priya Nair
+- Daily Deals: 50% off everything - today only
+
+**SUGGESTED ACTIONS**
+1. Submit enrollment form by 5 PM today
+2. Check failing build in project-alpha before demo
+3. Locate updated mockups for design review
+4. Review grant draft and send comments by Thursday
+5. Place lunch order by 11:30
+

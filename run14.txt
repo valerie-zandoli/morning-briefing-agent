@@ -1,0 +1,39 @@
+reasoningContent is not supported in multi-turn conversations with the Chat Completions API.
+[MOCK DATA: fake inbox, calendar, and Slack]
+
+[tool call] check_gmail
+[tool call] check_calendar
+[tool call] check_slack
+
+===== BRIEFING =====
+
+## Morning Briefing
+
+### URGENT
+- **Registrar Office**: Enrollment verification form due today by 5 PM — incomplete forms will be rejected.
+- **person A** (project-alpha): Build is failing on main since this morning — needs your attention before the demo.
+
+### UPCOMING EVENTS
+- **Team stand-up** — 4:00–4:15 PM, Room 3
+- **Partner design review** — 5:30–6:30 PM, Video call
+- **1:1 with mentor** — 6:00–6:30 PM, Cafe on 5th
+- ⚠️ **Overlap**: Partner design review and 1:1 with mentor overlap from 6:00–6:30 PM.
+
+### SLACK HIGHLIGHTS
+- **project-alpha**: person A tagged YOU about the failing build; person B says it's a missing config value they can reproduce locally.
+- **design-team**: person C reminded about partner design review timing; person D asked who has the updated mockups.
+- **general**: Lunch orders close at 11:30.
+
+### OTHER EMAILS
+- **Dana Whitfield**: Grant draft review requested — comments needed by Thursday morning.
+- **IT Helpdesk**: Password expires in 14 days (routine, no action today).
+- **Priya Nair**: Lunch invite for Friday near the office.
+- **Prize Team / Daily Deals**: Promotional/spam — ignore.
+
+### SUGGESTED ACTIONS
+1. Submit enrollment form before 5 PM today.
+2. Investigate the failing build on main (project-alpha) ahead of the demo.
+3. Resolve the 6:00–6:30 PM calendar conflict (design review vs. mentor 1:1).
+4. Review Dana's grant draft by Thursday morning.
+5. Plan to update your password within the next 14 days.
+

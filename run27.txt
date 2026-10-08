@@ -1,0 +1,50 @@
+reasoningContent is not supported in multi-turn conversations with the Chat Completions API.
+reasoningContent is not supported in multi-turn conversations with the Chat Completions API.
+reasoningContent is not supported in multi-turn conversations with the Chat Completions API.
+reasoningContent is not supported in multi-turn conversations with the Chat Completions API.
+reasoningContent is not supported in multi-turn conversations with the Chat Completions API.
+reasoningContent is not supported in multi-turn conversations with the Chat Completions API.
+[MOCK DATA: fake inbox, calendar, and Slack]
+
+[tool call] check_gmail
+[filter] dropped 3 promotional email(s) before the model saw them
+[tool call] check_calendar
+[tool call] check_slack
+
+===== BRIEFING =====
+
+
+
+# Morning Briefing
+
+## URGENT
+- **Registrar Office** — Enrollment verification form incomplete; must submit by 5 PM today or be rejected and reapply next term.
+- **Slack #general (@everyone)** — Timesheets due by end of day today, or payroll skips your cycle.
+- **Slack #project-alpha** — The build is failing on main; person A asks you to look before the demo.
+- **Calendar** — Your *Partner design review* (16:30–17:30) overlaps your *1:1 with mentor* (17:00–17:30); you're double-booked from 17:00–17:30.
+
+## UPCOMING EVENTS
+- **Team stand-up** — 15:00–15:15, Room 3 (attendees: priya, dana).
+- **Partner design review** — 16:30–17:30, Video call (attendees: partner, dana) — overlaps with 1:1.
+- **1:1 with mentor** — 17:00–17:30, Cafe on 5th (attendees: mentor) — overlaps with design review.
+- Note: the design review is confirmed to stay at the same time today (Slack #design-team).
+
+## SLACK HIGHLIGHTS
+- **#project-alpha** — Build on main has been failing since this morning; person B can reproduce it and suspects a missing config value.
+- **#general** — Lunch orders close at 11:30 (routine).
+- **#design-team** — Questions circulating about who has the updated mockups and where they're stored (information only, not for you).
+
+## OTHER EMAILS
+- **IT Helpdesk** — Routine notice: password expires in 14 days; no action needed today.
+- **Priya Nair** — Casual lunch invite for Friday around noon (no rush).
+- **"You won!" (Prize Team)** — Spam/phishing; ignore.
+- **3 promotional emails** were filtered out and are not shown here.
+- Dana Whitfield also asked for comments on a grant draft by Thursday morning (due tomorrow-ish, not today).
+
+## SUGGESTED ACTIONS
+1. Submit the enrollment verification form before 5 PM today (Registrar).
+2. Submit your timesheets before end of day today (Slack #general).
+3. Diagnose and fix the failing build on main before the demo (Slack #project-alpha).
+4. Resolve the 17:00–17:30 clash between the design review and your 1:1 with your mentor — reschedule one.
+5. Review Dana's grant draft and send comments by Thursday morning.
+

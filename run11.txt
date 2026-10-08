@@ -1,0 +1,38 @@
+reasoningContent is not supported in multi-turn conversations with the Chat Completions API.
+[MOCK DATA: fake inbox, calendar, and Slack]
+
+[tool call] check_gmail
+[tool call] check_calendar
+[tool call] check_slack
+
+===== BRIEFING =====
+
+
+
+# Morning Briefing
+
+## URGENT
+- **Enrollment verification form due today by 5 PM** — Registrar Office. Forms not submitted by then will be rejected and you'll need to reapply next term.
+
+## UPCOMING EVENTS
+- **16:00** Team stand-up (Room 3)
+- **17:30** Partner design review (Video call)
+- ⚠️ **Overlap:** "1:1 with mentor" (18:00–18:30, Cafe on 5th) conflicts with "Partner design review" (17:30–18:30, Video call). You have two events at the same time.
+
+## SLACK HIGHLIGHTS
+- **project-alpha:** person A @-mentions you — the build is failing on main since this morning; can you take a look before the demo? person B says they can reproduce it locally and suspects a missing config value.
+- **design-team:** person C reminds everyone the partner design review is still on for today; person D is asking who has the updated mockups.
+- **general:** lunch orders close at 11:30 — routine notice.
+
+## OTHER EMAILS
+- Dana Whitfield: grant draft review — send comments by Thursday morning for a Friday submission.
+- IT Helpdesk: password expires in 14 days — routine, no action needed today.
+- Priya Nair: lunch on Friday — social invitation, no rush.
+- Daily Deals: promotional sale — can ignore.
+
+## SUGGESTED ACTIONS
+1. Submit the enrollment verification form before 5 PM today (Registrar).
+2. Look into the failing build on main in project-alpha before the demo (person A requested your help).
+3. Resolve the 18:00–18:30 overlap between "1:1 with mentor" and "Partner design review" — pick which to attend or reschedule one.
+4. Send your comments on the grant draft to Dana by Thursday morning.
+

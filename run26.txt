@@ -1,0 +1,41 @@
+reasoningContent is not supported in multi-turn conversations with the Chat Completions API.
+[MOCK DATA: fake inbox, calendar, and Slack]
+
+[tool call] check_gmail
+[tool call] check_calendar
+[tool call] check_slack
+[filter] dropped 3 promotional email(s) before the model saw them
+
+===== BRIEFING =====
+
+# Morning Briefing
+
+## URGENT
+- **Registrar Office** — Enrollment verification form due today by 5 PM. Submit soon or you'll need to reapply next term.
+- **Slack (project-alpha)** — person A: Build is failing on main since this morning. Need your look before the demo.
+- **Slack (general)** — person E: Timesheets due by end of day today, or payroll skips you this cycle.
+
+## UPCOMING EVENTS
+- **Team stand-up** — 3:00–3:15 PM, Room 3
+- **Partner design review** — 4:30–5:30 PM, Video call
+- **1:1 with mentor** — 5:00–5:30 PM, Cafe on 5th
+  ⚠️ **Overlap:** Partner design review and 1:1 with mentor conflict 5:00–5:30 PM.
+
+## SLACK HIGHLIGHTS
+- **project-alpha** — person A flagged the build failure (task for you). person B says it's a missing config value locally.
+- **design-team** — person C reminded about partner design review time. person D asked about updated mockups (not addressed to you).
+- **general** — person E timesheet reminder (task for you). person F lunch order thread (routine).
+
+## OTHER EMAILS
+- **Dana Whitfield** — Grant draft review requested, comments needed by Thursday morning.
+- **IT Helpdesk** — Password expires in 14 days (routine, no action today).
+- **Priya Nair** — Lunch on Friday? (social).
+- 3 marketing emails were filtered out.
+
+## SUGGESTED ACTIONS
+1. Submit enrollment form before the 5 PM deadline.
+2. Investigate the build failure on main before the demo.
+3. Submit timesheets by end of day.
+4. Resolve the 5:00–5:30 PM calendar overlap (design review vs. mentor 1:1).
+5. Review Dana's grant draft and send comments by Thursday morning.
+

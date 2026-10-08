@@ -1,0 +1,36 @@
+reasoningContent is not supported in multi-turn conversations with the Chat Completions API.
+[MOCK DATA: fake inbox, calendar, and Slack]
+
+[tool call] check_gmail
+[tool call] check_calendar
+[tool call] check_slack
+
+===== BRIEFING =====
+
+Here's your morning briefing:
+
+**URGENT**
+- **Registrar Office**: Enrollment verification form due today by 5 PM — incomplete forms get rejected and you'd need to reapply next term.
+- **project-alpha (Slack)**: @YOU flagged — build is failing on main since this morning; needs a look before the demo.
+
+**UPCOMING EVENTS**
+- Team stand-up — 4:00 PM, Room 3
+- Partner design review — 5:30 PM, Video call → **overlaps** with 1:1 with mentor — 6:00 PM, Cafe on 5th
+
+**SLACK HIGHLIGHTS**
+- project-alpha: person B can reproduce the failure locally; suspects a missing config value.
+- design-team: person D can't find the updated mockups in the shared folder.
+
+**OTHER EMAILS**
+- Dana Whitfield: Grant draft review requested — comments needed by Thursday morning.
+- IT Helpdesk: Password expires in 14 days — routine, no action today.
+- Prize Team ("You won!"): **Phishing/suspicious** — ignore, do not reply or click anything.
+- Priya Nair: Lunch invite for Friday — no rush.
+
+**SUGGESTED ACTIONS**
+1. Submit the enrollment form before 5 PM today.
+2. Investigate the main build failure before the demo.
+3. Resolve the 5:30/6:00 PM calendar overlap (design review vs. mentor 1:1).
+4. Send grant draft comments to Dana by Thursday morning.
+5. Locate the updated mockups for the design team.
+

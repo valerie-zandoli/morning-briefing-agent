@@ -1,0 +1,44 @@
+reasoningContent is not supported in multi-turn conversations with the Chat Completions API.
+reasoningContent is not supported in multi-turn conversations with the Chat Completions API.
+reasoningContent is not supported in multi-turn conversations with the Chat Completions API.
+reasoningContent is not supported in multi-turn conversations with the Chat Completions API.
+reasoningContent is not supported in multi-turn conversations with the Chat Completions API.
+reasoningContent is not supported in multi-turn conversations with the Chat Completions API.
+[MOCK DATA: fake inbox, calendar, and Slack]
+
+[tool call] check_gmail
+[tool call] check_calendar
+[tool call] check_slack
+
+===== BRIEFING =====
+
+## Morning Briefing
+
+**URGENT**
+- **Registrar Office** — Enrollment verification form due today by 5 PM; incomplete forms get rejected.
+- **project-alpha (Slack)** — person A flagged the build failing on main since this morning; needs a fix before the demo.
+
+**UPCOMING EVENTS**
+- Team stand-up — 4:00 PM, Room 3
+- Partner design review — 5:30 PM, Video call
+- 1:1 with mentor — 6:00 PM, Cafe on 5th
+- ⚠️ Overlap: Partner design review (5:30–6:30) conflicts with your mentor 1:1 (6:00–6:30).
+
+**SLACK HIGHLIGHTS**
+- person A in #project-alpha asked you to look at the failing build.
+- person E in #general noted timesheets are due by end of day today.
+
+**OTHER EMAILS**
+- Dana Whitfield — Grant draft review requested by Thursday morning.
+- IT Helpdesk — Password expires in 14 days (routine, no action today).
+- Priya Nair — Lunch invite for Friday.
+- Prize Team — "You won!" email — likely phishing; do not reply.
+- Daily Deals — Promotional, ignore.
+
+**SUGGESTED ACTIONS**
+1. Submit the enrollment form before 5 PM.
+2. Investigate the failing build on main (project-alpha).
+3. Resolve the 6:00 PM calendar conflict (design review vs. mentor 1:1).
+4. Review Dana's grant draft so comments are ready Thursday morning.
+5. Submit timesheets by end of day.
+
